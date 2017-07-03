@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="angularTodo">
+
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<title>Prueba</title>
+</head>
+
+<body ng-controller="mainController" ng-init="init()">
+    <br/>
+    <div class="container">
+        <div class="col-sm-5">
+            <form>
+                <div class="form-group">
+                    <label for="txttitulo">Titulo</label>
+                    <input type="" class="form-control" id="titulo" ng-model="album.titulo">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Descripcion</label>
+                    <input type="" class="form-control" id="txtDescripcion" ng-model="album.descripcion">
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="AgregarAlbum(album)">Agregar</button>
+            </form>
+        </div>
+        <div class="row col-sm-5">
+            <div class="panel panel-default" ng-repeat="albumes in albumes">
+                <div class="panel-heading">{{albumes.title}}</div>
+                <div class="panel-body">{{albumes.description}}
+                <div class="row col-sm-12">
+                    <button type="button" class="btn btn-danger" ng-click="EliminarAlbum(albumes)">Eliminar Registro</button>
+                    <button type="button" class="btn btn-success" ng-click="ActualizarAlbum(albumes)">Actualiza Registro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="/js/jquery-3.2.1.min"></script> -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
